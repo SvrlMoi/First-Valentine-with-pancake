@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Happy Valentine :)</title>
+    <link rel="shortcut icon" type="image/png" href="./img/heart.svg" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Music Player Section -->
+    <div class="music-player">
+      <img src="img/Summer 2000 Baby.jpeg" alt="Cover" class="music-cover" />
+      <div class="music-info">
+        <p class="music-title">Summer 2000 Baby</p>
+        <p class="music-artist">TV Girl &amp; George Clanton</p>
+      </div>
+      <!-- Elemento de audio sin autoplay para sortear las políticas de autoplay -->
+      <audio id="background-music" preload="auto" loop>
+        <source src="music/Summer 2000 Baby.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <!-- Botón para iniciar la reproducción de la música -->
+      <button id="playButton" class="play-button">Play Music</button>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+      <div class="one">
+        <h1 class="one">
+          Hey <span id="name">Valerie</span>
+        </h1>
+        <p class="two" id="greetingText">You are my first Valentine!</p>
+      </div>
+      <div class="three">
+        <p>It's Valentine!!! <span class="heart-emoji">💖</span></p>
+      </div>
+      <div class="four">
+        <div class="text-box">
+          <p class="hbd-chatbox">
+            Happy Valentine's Day, Gorgeous! Sending love your way!
+          </p>
+          <p class="fake-btn">Send</p>
+        </div>
+      </div>
+      <div class="five">
+        <p class="idea-1">I thought about sending flowers...</p>
+        <p class="idea-2">But then I decided to make this.</p>
+        <p class="idea-3">
+          Because you deserve something <strong>extra special</strong>.
+        </p>
+        <p class="idea-4">And that's because,</p>
+        <p class="idea-5">
+          You are the most sweet, kind-hearted, patient, adorable, enchanting... woman in the whole existence <span>:)</span>
+        </p>
+        <p class="idea-6">
+          <span>L</span>
+          <span>O</span>
+          <span>V</span>
+          <span>E</span>
+        </p>
+      </div>
+      <div class="six">
+        <img src="img/Gorgeous Valerie.jpg" alt="Valerie" class="girl-dp" id="imagePath" />
+        <div class="wish">
+          <h3 class="wish-hbd">Happy Valentine's Day, Valerie</h3>
+          <h5 id="wishText">IS OUR FIRST VALENTINE! <3</h5>
+        </div>
+      </div>
+      <div class="seven">
+        <div class="baloons">
+          <img src="img/balloon.svg" alt="Balloon" />
+          <img src="img/heart.svg" alt="Heart" />
+          <img src="img/smiling.svg" alt="Smiling Emoji" />
+          <img src="img/balloon.svg" alt="Balloon" />
+        </div>
+      </div>
+      <div class="nine">
+        <p>Hope you loved it! :)</p>
+        <p id="replay">Or click here to watch again!</p>
+        <p class="last-smile">:)</p>
+      </div>
+    </div>
+
+    <!-- Scripts Externos -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
+    <!-- Tu archivo main.js -->
+    <script type="text/babel" src="script/main.js"></script>
+    <!-- Script para controlar el botón de reproducción -->
+    <script type="text/babel">
+      const playButton = document.getElementById("playButton");
+      const audioPlayer = document.getElementById("background-music");
+
+      playButton.addEventListener("click", () => {
+        audioPlayer.play().catch((error) => {
+          console.error("Error al reproducir la música:", error);
+        });
+        playButton.style.display = "none"; // Oculta el botón tras iniciar la música
+      });
+    </script>
+  </body>
+</html>
