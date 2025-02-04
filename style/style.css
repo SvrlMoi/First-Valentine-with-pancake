@@ -1,0 +1,169 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Patrick Hand", cursive;
+  background-color: #fef6e4;
+  color: #4a4a4a;
+}
+
+/* Contenedor principal */
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  text-align: center;
+  visibility: hidden;
+  position: relative;
+  overflow: visible;
+  background: #f4e1d2;
+  z-index: 1;
+}
+
+/* Secciones y elementos */
+.one {
+  font-size: 4rem;
+  color: #ff6f91;
+}
+
+.two {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ff8c94;
+}
+
+.three p {
+  font-size: 2.5rem;
+  color: #ffb6c1;
+}
+
+.text-box {
+  width: 80%;
+  margin: 20px auto;
+  border: 2px solid #ff8c94;
+  border-radius: 10px;
+  background-color: #fff0f5;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fake-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #fff;
+  background-color: #f28e8e;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.idea-5 {
+  font-size: 3.5rem;
+  color: #f06292;
+}
+
+.idea-6 span {
+  font-size: 6rem;
+  color: #ffadad;
+}
+
+/* Sección de la imagen y felicitación */
+.six {
+  position: relative;
+  z-index: 2;
+}
+
+.six img {
+  width: 25%;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wish-hbd {
+  font-size: 3.5rem;
+  color: #ff748c;
+}
+
+/* Globos */
+.baloons img {
+  width: 100px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.nine p {
+  font-size: 2rem;
+  color: #4a4a4a;
+}
+
+#replay {
+  cursor: pointer;
+  color: #ff6f91;
+  text-decoration: underline;
+}
+
+/* Estilo del reproductor de música */
+.music-player {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.music-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.music-info {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.music-title {
+  font-weight: bold;
+}
+
+.music-artist {
+  font-size: 0.7rem;
+}
+
+audio {
+  display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .six img {
+    width: 60%;
+  }
+
+  .one {
+    font-size: 3rem;
+  }
+
+  .idea-6 span {
+    font-size: 4rem;
+  }
+}
